@@ -16,6 +16,9 @@ export default function Navbar() {
         <Link href="/produtos" className={isActive('/produtos') ? 'bg-blue-600 px-3 py-2 rounded' : 'px-3 py-2 hover:bg-slate-700 rounded'}>
           🧾 Produtos
         </Link>
+        <Link href="/gerarnomes" className={isActive('/gerarnomes') ? 'bg-blue-600 px-3 py-2 rounded' : 'px-3 py-2 hover:bg-slate-700 rounded'}>
+          🧾 Gerador de Nomes
+        </Link>
       </div>
     </nav>
   );

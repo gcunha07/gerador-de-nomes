@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import AdicionarProduto from '@/components/AdicionarProduto'
+import AdicionarNome from '@/components/AdicionarNome'
 import EditarProduto from '@/components/EditarProduto'
 import { carregarProdutosAPI, eliminarProdutoAPI } from '@/services/api'
 
@@ -19,17 +19,17 @@ export default function Produtos() {
 			const data = await carregarProdutosAPI()
 			setProdutos(data)
 		} catch (error) {
-			alert('Erro ao carregar produtos')
+			alert('Erro ao carregar nomes')
 		}
 	}
 
 	async function eliminarProduto(id) {
-		if (confirm('Tens a certeza que queres eliminar este produto?')) {
+		if (confirm('Tens a certeza que queres eliminar este nome?')) {
 			try {
 				await eliminarProdutoAPI(id)
 				setProdutos(produtos.filter(p => p._id !== id))
 			} catch (error) {
-				alert('Erro ao eliminar produto')
+				alert('Erro ao eliminar nome')
 			}
 		}
 	}
